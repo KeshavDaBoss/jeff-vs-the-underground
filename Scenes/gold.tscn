@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://bnrfth0jr6r57"]
+
+[ext_resource type="Texture2D" uid="uid://dy3348ae5awcm" path="res://Images/Other/Gold.png" id="1_5fbmp"]
+[ext_resource type="Script" uid="uid://32y3vatkms6o" path="res://Scripts/gold.gd" id="1_f32ux"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f32ux"]
+radius = 14.0
+
+[sub_resource type="Animation" id="Animation_f32ux"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Gold:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_1lqfo"]
+resource_name = "gold"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Gold:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -5), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q4j6m"]
+_data = {
+&"RESET": SubResource("Animation_f32ux"),
+&"gold": SubResource("Animation_1lqfo")
+}
+
+[node name="gold" type="Area2D" unique_id=1491482996]
+script = ExtResource("1_f32ux")
+
+[node name="Gold" type="Sprite2D" parent="." unique_id=797567645]
+texture = ExtResource("1_5fbmp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2045822375]
+shape = SubResource("CapsuleShape2D_f32ux")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=286846520]
+libraries/ = SubResource("AnimationLibrary_q4j6m")
+autoplay = &"gold"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

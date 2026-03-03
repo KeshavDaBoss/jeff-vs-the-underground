@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://dcoblji3sko6y"]
+
+[ext_resource type="Script" uid="uid://c7yqpjx7w1o8u" path="res://jeff.gd" id="1_ewpx7"]
+[ext_resource type="Texture2D" uid="uid://bl7lgr4bcipor" path="res://Images/Jeff/Idle.png" id="2_6kjau"]
+[ext_resource type="Texture2D" uid="uid://catr4a51u63a0" path="res://Images/Jeff/Run.png" id="3_ajdjb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1h8am"]
+radius = 14.0
+height = 90.0
+
+[sub_resource type="Animation" id="Animation_j55x1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Idle:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(45, 59, 29, 69)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Idle:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_6kjau")]
+}
+
+[sub_resource type="Animation" id="Animation_cg2et"]
+resource_name = "jeff_die"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Idle:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Rect2(177, 72, 41, 56), Rect2(272, 89, 68, 39), Rect2(397, 112, 68, 16)]
+}
+
+[sub_resource type="Animation" id="Animation_mlsua"]
+resource_name = "jeff_idle"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Idle:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(45, 59, 29, 69), Rect2(173, 59, 29, 69), Rect2(429, 58, 29, 70), Rect2(557, 57, 29, 71), Rect2(685, 57, 29, 71)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Idle:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_6kjau")]
+}
+
+[sub_resource type="Animation" id="Animation_ajdjb"]
+resource_name = "jeff_jump"
+
+[sub_resource type="Animation" id="Animation_w3dqi"]
+resource_name = "jeff_run"
+length = 1.5000001
+loop_mode = 1
+step = 90.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Idle:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_ajdjb")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Idle:region_rect")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(291, 60, 54, 63), Rect2(421, 61, 49, 67), Rect2(550, 60, 37, 68), Rect2(691, 59, 37, 69), Rect2(816, 60, 39, 68), Rect2(934, 60, 53, 63)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uch0n"]
+_data = {
+&"RESET": SubResource("Animation_j55x1"),
+&"jeff_die": SubResource("Animation_cg2et"),
+&"jeff_idle": SubResource("Animation_mlsua"),
+&"jeff_jump": SubResource("Animation_ajdjb"),
+&"jeff_run": SubResource("Animation_w3dqi")
+}
+
+[node name="Jeff" type="CharacterBody2D" unique_id=1589523657]
+script = ExtResource("1_ewpx7")
+
+[node name="Idle" type="Sprite2D" parent="." unique_id=2022623807]
+position = Vector2(0, 0.42577982)
+scale = Vector2(1, 1.3401188)
+texture = ExtResource("2_6kjau")
+region_enabled = true
+region_rect = Rect2(45, 59, 29, 69)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=382733267]
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_1h8am")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1117133174]
+libraries/ = SubResource("AnimationLibrary_uch0n")
+autoplay = &"jeff_idle"
+speed_scale = 3.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=273762385]

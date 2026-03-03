@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://ce22frfami67p"]
+
+[ext_resource type="FontFile" uid="uid://o6ttqfefgwek" path="res://PixelifySans-VariableFont_wght.ttf" id="1_5oaki"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uikms"]
+bg_color = Color(0.65, 0.62129164, 0.61749995, 0.34509805)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vg50i"]
+bg_color = Color(0.6079716, 0.6017359, 0.5646581, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1770093402]
+
+[node name="Panel" type="Panel" parent="." unique_id=1564191911]
+offset_right = 371.0
+offset_bottom = 56.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_uikms")
+
+[node name="Label" type="Label" parent="Panel" unique_id=2018770801]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 1.0
+offset_right = 106.0
+offset_bottom = 34.0
+theme_override_fonts/font = ExtResource("1_5oaki")
+theme_override_styles/focus = SubResource("StyleBoxFlat_vg50i")
+text = "Collected: "
+horizontal_alignment = 1
+vertical_alignment = 1
