@@ -50,7 +50,7 @@ func die():
 	is_dead = true
 	
 	print("Jeff is dying!") # Check your 'Output' at the bottom to see this
-	$AnimatedSprite2D.play("jeff_die")
+a	$AnimatedSprite2D.play("jeff_die")
 	
 	# Stop Jeff from moving
 	velocity = Vector2.ZERO
