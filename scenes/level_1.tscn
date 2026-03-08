@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dxwj1trhdhah8"]
+
+[ext_resource type="PackedScene" uid="uid://f4l2qs5k0wnm" path="res://scenes/jeff.tscn" id="1_014kd"]
+[ext_resource type="Texture2D" uid="uid://yhpmbre3x75w" path="res://icon.svg" id="2_bswci"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bswci"]
+size = Vector2(124, 128)
+
+[node name="Node2D" type="Node2D" unique_id=838140249]
+
+[node name="Jeff" parent="." unique_id=845365722 instance=ExtResource("1_014kd")]
+position = Vector2(239.00002, 404)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1795410998]
+position = Vector2(212, 602)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=384600626]
+position = Vector2(2, -1)
+texture = ExtResource("2_bswci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1946724227]
+position = Vector2(4, -1)
+shape = SubResource("RectangleShape2D_bswci")
