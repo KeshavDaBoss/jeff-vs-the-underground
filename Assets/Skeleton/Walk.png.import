@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1xjyn2pgrtll"
-path="res://.godot/imported/Dead.png-25442ef6882f30cc80797cdba5566354.ctex"
+uid="uid://qwjgyrdrjkdp"
+path="res://.godot/imported/Walk.png-00802bdda2262cf92cc980a7c492a034.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/images/Jeff/Dead.png"
-dest_files=["res://.godot/imported/Dead.png-25442ef6882f30cc80797cdba5566354.ctex"]
+source_file="res://Assets/Skeleton/Walk.png"
+dest_files=["res://.godot/imported/Walk.png-00802bdda2262cf92cc980a7c492a034.ctex"]
 
 [params]
 

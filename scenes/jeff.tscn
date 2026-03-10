@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://f4l2qs5k0wnm"]
 
 [ext_resource type="Script" uid="uid://c3ytg3rapcq5g" path="res://scripts/jeff.gd" id="1_p1ukq"]
-[ext_resource type="Texture2D" path="res://Assets/Jeff/Attack.png" id="1_vbsor"]
-[ext_resource type="Texture2D" path="res://Assets/Jeff/Dead.png" id="2_p1ukq"]
-[ext_resource type="Texture2D" path="res://Assets/Jeff/Hurt.png" id="3_uson7"]
-[ext_resource type="Texture2D" path="res://Assets/Jeff/Idle.png" id="4_y02qk"]
-[ext_resource type="Texture2D" path="res://Assets/Jeff/Jump.png" id="5_wesfp"]
-[ext_resource type="Texture2D" path="res://Assets/Jeff/Run.png" id="6_85nqi"]
+[ext_resource type="Texture2D" uid="uid://komitxpp603a" path="res://Assets/Jeff/Attack.png" id="1_vbsor"]
+[ext_resource type="Texture2D" uid="uid://1xjyn2pgrtll" path="res://Assets/Jeff/Dead.png" id="2_p1ukq"]
+[ext_resource type="Texture2D" uid="uid://c0b6gehc78jqq" path="res://Assets/Jeff/Hurt.png" id="3_uson7"]
+[ext_resource type="Texture2D" uid="uid://cic85638s5pdu" path="res://Assets/Jeff/Idle.png" id="4_y02qk"]
+[ext_resource type="Texture2D" uid="uid://cysp2y26m3k7f" path="res://Assets/Jeff/Jump.png" id="5_wesfp"]
+[ext_resource type="Texture2D" uid="uid://b1fc6wwq70sqo" path="res://Assets/Jeff/Run.png" id="6_85nqi"]
 [ext_resource type="AudioStream" uid="uid://c8pipgjdgxqva" path="res://Assets/sounds/jump.wav" id="8_uson7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kehfd"]
@@ -266,3 +266,6 @@ shape = SubResource("CapsuleShape2D_p1ukq")
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="." unique_id=1021366880]
 stream = ExtResource("8_uson7")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1395183489]
+zoom = Vector2(2, 2)

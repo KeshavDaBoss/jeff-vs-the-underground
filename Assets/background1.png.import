@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlaq3f3hiu07f"
-path="res://.godot/imported/godotwaka.png-ef0518417b4f997d237759e5551dd05d.ctex"
+uid="uid://tcbccca48xwd"
+path="res://.godot/imported/background1.png-850d81edfea52b7344aa7b21b611f36a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/godotwaka.png"
-dest_files=["res://.godot/imported/godotwaka.png-ef0518417b4f997d237759e5551dd05d.ctex"]
+source_file="res://Assets/background1.png"
+dest_files=["res://.godot/imported/background1.png-850d81edfea52b7344aa7b21b611f36a.ctex"]
 
 [params]
 

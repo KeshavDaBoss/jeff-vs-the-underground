@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0p3nm56s0bba"
-path="res://.godot/imported/tileset.png-e51685add601466ff31999fe908d7ce6.ctex"
+uid="uid://ckabv31gteyij"
+path="res://.godot/imported/Hurt.png-eef042efa2945c342712d6c05c7b73b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/images/tileset.png"
-dest_files=["res://.godot/imported/tileset.png-e51685add601466ff31999fe908d7ce6.ctex"]
+source_file="res://Assets/Skeleton/Hurt.png"
+dest_files=["res://.godot/imported/Hurt.png-eef042efa2945c342712d6c05c7b73b2.ctex"]
 
 [params]
 

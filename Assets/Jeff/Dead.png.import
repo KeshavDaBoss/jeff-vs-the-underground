@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckabv31gteyij"
-path="res://.godot/imported/Hurt.png-df4891e890aab1a61593c75e1beba207.ctex"
+uid="uid://1xjyn2pgrtll"
+path="res://.godot/imported/Dead.png-4ee451cec14ec1a1963536c092683ef4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/images/Skeleton/Hurt.png"
-dest_files=["res://.godot/imported/Hurt.png-df4891e890aab1a61593c75e1beba207.ctex"]
+source_file="res://Assets/Jeff/Dead.png"
+dest_files=["res://.godot/imported/Dead.png-4ee451cec14ec1a1963536c092683ef4.ctex"]
 
 [params]
 
