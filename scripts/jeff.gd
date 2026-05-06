@@ -5,9 +5,12 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -1200.0
+var alive = true
 
 
 func _physics_process(delta: float) -> void:
+	if !alive:
+		return
 	#Add animations
 	if velocity.x > 1 or velocity.x < -1:
 		animated_sprite_2d.animation = "run"
@@ -35,3 +38,7 @@ func _physics_process(delta: float) -> void:
 		animated_sprite_2d.flip_h = false
 	elif direction == -1.0:
 		animated_sprite_2d.flip_h = true
+
+func die() -> void:
+	animated_sprite_2d.animation = "die"
+	alive = false

@@ -20,5 +20,10 @@ func _on_timer_timeout() -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.name == "Jeff":
+	if body.name == "Jeff" and body.alive :
 		emit_signal("player_died", body)
+
+
+func _on_player_died(body):
+	body.die()
+	print("Player killed")

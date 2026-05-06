@@ -256,9 +256,8 @@ script = ExtResource("1_p1ukq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1569149444]
 sprite_frames = SubResource("SpriteFrames_uhvio")
-animation = &"idle"
+animation = &"die"
 autoplay = "idle"
-frame_progress = 0.9011632
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1782098443]
 position = Vector2(-6.3333335, 11.333333)

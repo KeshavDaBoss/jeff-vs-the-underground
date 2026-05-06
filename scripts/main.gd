@@ -11,11 +11,11 @@ func _process(delta: float) -> void:
 	pass
 
 func _setup_level() -> void:
-	var enemies = $LevelRoot.get_node_or_null("enemies")
+	var enemies = $LevelRoot.get_node_or_null("Enemies")
 	if enemies:
 		for enemy in enemies.get_children():
 			enemy.player_died.connect(_on_player_died)
 
 func _on_player_died(body):
-	print(body)
+	body.die()
 	print("Player killed")
