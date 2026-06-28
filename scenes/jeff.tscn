@@ -267,4 +267,4 @@ shape = SubResource("CapsuleShape2D_p1ukq")
 stream = ExtResource("8_uson7")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1395183489]
-zoom = Vector2(2, 2)
+zoom = Vector2(1.5, 1.5)

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bcijr36rxfcf"]
 
 [ext_resource type="Texture2D" uid="uid://cdghrdu2vph3j" path="res://Assets/gold.png" id="1_ls0pt"]
+[ext_resource type="Script" uid="uid://cqwkmgurhk06i" path="res://scripts/gold.gd" id="1_yna14"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yna14"]
 atlas = ExtResource("1_ls0pt")
@@ -140,6 +141,7 @@ animations = [{
 radius = 32.140316
 
 [node name="Gold" type="Area2D" unique_id=2072285570]
+script = ExtResource("1_yna14")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=993538717]
 texture_filter = 1

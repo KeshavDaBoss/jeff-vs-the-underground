@@ -27,3 +27,4 @@ func _on_body_entered(body: Node2D) -> void:
 func _on_player_died(body):
 	body.die()
 	print("Player killed")
+	get_tree().reload_current_scene()
